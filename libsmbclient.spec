@@ -2,12 +2,12 @@
 
 Summary:	Samba library and clients
 Name:		libsmbclient
-Version:	3.6.8
-Release:	2
+Version:	3.6.9
+Release:	1
 License:	GPL v3
 Group:		Networking/Daemons
 Source0:	http://www.samba.org/samba/ftp/%{rname}-%{version}.tar.gz
-# Source0-md5:	fbb245863eeef2fffe172df779a217be
+# Source0-md5:	0c48bbeb9549fcda37f108aa3c2a817f
 URL:		http://www.samba.org/
 BuildRequires:	acl-devel
 BuildRequires:	autoconf
