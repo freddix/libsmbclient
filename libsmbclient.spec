@@ -2,12 +2,12 @@
 
 Summary:	Samba library and clients
 Name:		libsmbclient
-Version:	3.6.13
+Version:	3.6.22
 Release:	1
 License:	GPL v3
 Group:		Networking/Daemons
 Source0:	http://www.samba.org/samba/ftp/%{rname}-%{version}.tar.gz
-# Source0-md5:	b9fe8413cbb6fa4b970a159968db2fb4
+# Source0-md5:	59add4bb178ebc188d857bc13a508c0b
 URL:		http://www.samba.org/
 BuildRequires:	acl-devel
 BuildRequires:	autoconf
@@ -80,16 +80,20 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libsmbclient.so.*
-%attr(755,root,root) %{_libdir}/libsmbsharemodes.so.*
-%attr(755,root,root) %{_libdir}/libtdb.so.*
-%attr(755,root,root) %{_libdir}/libwbclient.so.*
+%attr(755,root,root) %ghost %{_libdir}/libtdb.so.1
+%attr(755,root,root) %ghost %{_libdir}/libtevent.so.0
+%attr(755,root,root) %{_libdir}/libsmbclient.so.0
+%attr(755,root,root) %{_libdir}/libsmbsharemodes.so.0
+%attr(755,root,root) %{_libdir}/libtdb.so.*.*.*
+%attr(755,root,root) %{_libdir}/libtevent.so.*.*.*
+%attr(755,root,root) %{_libdir}/libwbclient.so.0
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libsmbclient.so
 %attr(755,root,root) %{_libdir}/libsmbsharemodes.so
 %attr(755,root,root) %{_libdir}/libtdb.so
+%attr(755,root,root) %{_libdir}/libtevent.so
 %attr(755,root,root) %{_libdir}/libwbclient.so
 %{_includedir}/libsmbclient.h
 %{_includedir}/wbclient.h
